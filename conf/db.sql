@@ -5,13 +5,4 @@ CREATE TABLE oauth_refresh_tokens (refresh_token VARCHAR(40) NOT NULL, client_id
 CREATE TABLE users (id SERIAL NOT NULL, username VARCHAR(255) NOT NULL, CONSTRAINT id_pk PRIMARY KEY (id));
 CREATE TABLE oauth_scopes (scope TEXT, is_default BOOLEAN);
 
-INSERT INTO oauth_clients (client_id,client_secret,redirect_uri,grant_types,scope,user_id) VALUES ('123456789','987654321','http://mattermost.company.com/signup/gitlab/complete','authorization_code','api','');
-
-if [ $? ]
-then ok "Client has been created ! Oauth Database is configured.\n"
-info "Client ID : $client_id"
-warn "Client Secret : $client_secret\n"
-info "Keep id and secret, you will need them to configure Mattermost"
-warn "Beware Client Secret IS PRIVATE and MUST BE KEPT SECRET"
-else error "Client has not been created ! Check log below"
-fi
+INSERT INTO oauth_clients (client_id,client_secret,redirect_uri,grant_types,scope,user_id) VALUES ('__CLIENT_ID__','__CLIENT_SECRET__','http://mattermost.company.com/signup/gitlab/complete','authorization_code','api','');
