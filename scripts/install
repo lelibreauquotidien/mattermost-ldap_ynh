@@ -81,8 +81,8 @@ ynh_app_setting_set --app=$app --key=db_name --value=$db_name
 ynh_mysql_setup_db --db_user=$db_user --db_name=$db_name
 cp ../conf/db.sql /tmp/mattermost-ldap.sql
 
-client_id=$(ynh_random_string --length=30)
-client_secret=$(ynh_random_string --length=30)
+client_id=$(ynh_string_random --length=30)
+client_secret=$(ynh_string_random --length=30)
 ynh_replace_string --match_string="__CLIENT_ID__" --replace_string="$client_id" --target_file=/tmp/mattermost-ldap.sql
 ynh_replace_string --match_string="__CLIENT_SECRET__" --replace_string="$client_secret" --target_file=/tmp/mattermost-ldap.sql
 ynh_mysql_execute_file_as_root --file=../conf/db.sql --database=$db_name
