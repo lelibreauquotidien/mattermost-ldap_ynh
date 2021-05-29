@@ -1,7 +1,7 @@
-SOURCE_URL=url of app's source
-SOURCE_SUM=sha256 checksum
+SOURCE_URL=https://github.com/Crivaledaz/Mattermost-LDAP/archive/refs/tags/v2.0.tar.gz
+SOURCE_SUM=b6626b48f1bcc690ebbdceee7587ce4cf43edf249c2ce8bc88c52181ed409a00
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=
+SOURCE_FILENAME=v2.0.tar.gz
 SOURCE_EXTRACT=true
