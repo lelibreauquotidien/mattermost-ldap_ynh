@@ -5,7 +5,7 @@ $db_host	  = getenv('db_host') ?: "127.0.0.1";
 $db_name	  = getenv('db_name') ?: "__DB_NAME__";
 $db_type 	  = getenv('db_type') ?: "mysql";
 $db_user 	  = getenv('db_user') ?: "__DB_USER__";
-$db_pass 	  = getenv('db_pass') ?: "__DB_PASSWORD__";
+$db_pass 	  = getenv('db_pass') ?: "__DB_PWD__";
 $dsn	      = $db_type . ":dbname=" . $db_name . ";host=" . $db_host . ";port=" . $db_port;
 
 /* Uncomment the line below to set date.timezone to avoid E.Notice raise by strtotime() (in Pdo.php)
